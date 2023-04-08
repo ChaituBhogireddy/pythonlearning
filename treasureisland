@@ -1,0 +1,108 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+crossroad = input('''You're at a cross road. Where do you want to got? Type "left" or "right"\n''' ).lower()
+if crossroad == "left":
+    lake = input('''\nYou come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type \"swim\" to swim across.\n''').lower()
+    if lake == "wait":
+        island = input("\nYou arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?\n").lower()
+        if island == "yellow":
+            print("\nYou enter a room of treasure. You Won!\n")
+            print(r'''                   _.--.
+                        _.-'_:-'||
+                    _.-'_.-::::'||
+               _.-:'_.-::::::'  ||
+             .'`-.-:::::::'     ||
+            /.'`;|:::::::'      ||_
+           ||   ||::::::'     _.;._'-._
+           ||   ||:::::'  _.-!oo @.!-._'-.
+           \'.  ||:::::.-!()oo @!()@.-'_.|
+            '.'-;|:.-'.&$@.& ()$%-'o.'\U||
+              `>'-.!@%()@'@_%-'_.-o _.|'||
+               ||-._'-.@.-'_.-' _.-o  |'||
+               ||=[ '-._.-\U/.-'    o |'||
+               || '-.]=|| |'|      o  |'||
+               ||      || |'|        _| ';
+               ||      || |'|    _.-'_.-'
+               |'-._   || |'|_.-'_.-'
+               '-._'-.|| |' `_.-'
+                    '-.||_/.-' ''')
+        elif island == "blue":
+            print("\nYou enter a room of beasts. Game Over\n")
+            print(''' (    )
+                  ((((()))
+                  |o\ /o)|
+                  ( (  _')
+                   (._.  /\__
+                  ,\___,/ '  ')
+    '.,_,,       (  .- .   .    )
+     \   \\     ( '        )(    )
+      \   \\    \.  _.__ ____( .  |
+       \  /\\   .(   .'  /\  '.  )
+        \(  \\.-' ( /    \/    \)
+         '  ()) _'.-|/\/\/\/\/\|
+             '\\ .( |\/\/\/\/\/|
+               '((  \    /\    /
+               ((((  '.__\/__.')
+                ((,) /   ((()   )
+                 "..-,  (()("   /
+                  _//.   ((() ."
+          _____ //,/" ___ ((( ', ___
+                           ((  )
+                            / /
+                          _/,/'
+                        /,/,"
+''')
+        elif island == "red":
+            print("\nYou enter a room of Lions . Game Over\n")
+            print('''                                             ,w.
+                                              ,YWMMw  ,M  ,
+                         _.---.._   __..---._.'MMMMMw,wMWmW,
+                    _.-""        """           YP"WMMMMMMMMMb,
+                 .-' __.'                   .'     MMMMW^WMMMM;
+     _,        .'.-'"; `,       /`     .--""      :MMM[==MWMW^;
+  ,mM^"     ,-'.'   /   ;      ;      /   ,       MMMMb_wMW"  @\
+ ,MM:.    .'.-'   .'     ;     `\    ;     `,     MMMMMMMW `"=./`-,
+ WMMm__,-'.'     /      _.\      F"""-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
+ "^MP__.-'    ,-' _.--""   `-,   ;       \  ; ;MMMMMMMMMMW^``; __|
+            /   .'            ; ;         )  )`{  \ `"^W^`,   \  :
+           /  .'             /  (       .'  /     Ww._     `.  `"
+          /  Y,              `,  `-,=,_{   ;      MMMP`""-,  `-._.-,
+         (--, )                `,_ / `) \/"")      ^"      `-, -;"\:
+          `"""                    `"""   `"'                  `---" ''')
+        else:
+            print('''Please enter your color correctly, "red", "blue" or "yellow"''')
+    elif lake == "swim":
+        print("You drowned in middle. Game Over")
+    else:
+        print('''Please enter your choice correctly, "wait" or "swim"''')
+elif crossroad == "right":
+    print("You have choosen a wrong path. Game Over")
+else:
+    print('''Please enter your direction correctly, "left" or "right"''')
+
